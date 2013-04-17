@@ -1,0 +1,75 @@
+[menu]
+menuitem=GHOST, Start Ghost Multicast.
+menuitem=CD, Start computer with CD-ROM support.
+menuitem=NET, Start computer with Network support.
+menuitem=GIGNET, No EMM386 (for Intel Gigabit NICS)
+menuitem=NETCD, Start the computer with CD-ROM and Network support.
+menuitem=NONE, Start the computer with basic system.
+menudefault=NET,10
+menucolor=7,0
+
+[CD]
+device=himem.sys /testmem:off
+fileshigh=30
+buffershigh=15
+dos=high,umb
+stacks=9,256
+devicehigh=ramdrive.sys /E 4096
+lastdrive=z
+device=oakcdrom.sys /D:mscd001
+
+[NET]
+device=himem.sys
+REM devicehigh=ramdrive.sys /E 4096
+rem device=emm386.exe
+DOS=HIGH,UMB,AUTO
+SHELL=COMMAND.COM /E:1024 /P
+STACKSHIGH=0,0
+FCBSHIGH=1,0
+FILESHIGH=60
+BUFFERSHIGH=15
+lastdrive=Z
+devicehigh=ifshlp.sys
+
+[GHOST]
+device=himem.sys
+rem devicehigh=ramdrive.sys /E 4096
+DOS=HIGH,UMB,AUTO
+SHELL=COMMAND.COM /E:1024 /P
+STACKSHIGH=0,0
+FCBSHIGH=1,0
+FILESHIGH=60
+BUFFERSHIGH=15
+lastdrive=Z
+devicehigh=ifshlp.sys
+
+[GIGNET]
+device=himem.sys
+rem devicehigh=ramdrive.sys /E 4096
+DOS=HIGH,UMB,AUTO
+SHELL=COMMAND.COM /E:1024 /P
+STACKSHIGH=0,0
+FCBSHIGH=1,0
+FILESHIGH=60
+BUFFERSHIGH=15
+lastdrive=Z
+devicehigh=ifshlp.sys
+
+[NETCD]
+device=himem.sys
+rem devicehigh=ramdrive.sys /E 4096
+rem device=emm386.exe
+DOS=HIGH,UMB,AUTO
+STACKSHIGH=0,0
+FCBSHIGH=1,0
+FILESHIGH=60
+BUFFERSHIGH=15
+lastdrive=Z
+devicehigh=ifshlp.sys
+devicehigh=oakcdrom.sys /D:mscd001 
+
+[NONE]
+files=60
+stacks=0,0
+buffers=30
+lastdrive=Z

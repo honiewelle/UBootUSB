@@ -1,0 +1,59 @@
+AUTONIC= 1 
+UNATTENDED=NO
+DHCP=YES
+NETCARD=1
+COMPUTERNAME={RANDOM}
+AUTOLOGON=YES
+#LOGON=
+#DOMAIN=
+#ENCRYPTPW=
+#PASSWORD=
+SHAREDRIVE=F
+SHAREPATH=\\SERVER\SHARE
+TIMER= 6 
+#IPADDR=192 168 1 5
+#MASK=255 255 255 0
+#GATEWAY=192 168 1 1
+#DNSSERVER=192 168 1 1
+#CMD=
+#CMD=
+#CMD=
+#PROT=SLOT=0X0045
+#PROT=SPEEDDUPLEX=3
+#PROT=BUSNO=
+#PROT=DEVICENO=
+# This is the answerfile for the network configuration utility 4.0
+
+# When the network configuration utility loads you will be given a chance to change
+# these settings. (unless TIMER=0 and UNATTENDED=YES)
+
+# remove the "#" from a line to enable the option
+# leave no spaces between the = and your provided answer
+
+# AUTONIC determines if the utility should automatically select an auto-detected NIC
+# as your network card selection
+# Add up to 100 CMD= lines.  They will be used to construct a post-boot
+# script for custom functions.
+
+# PROT= allows you to add in advanced configuration settings for the protocol.ini
+# file for advanced NIC options.  Note: each manufacturer has their own
+# syntax for these commands.  contact the mfr website for your specific NIC options.
+
+# TIMER allows you to specify the timeout feature if UNATTENDED=YES
+# setting TIMER=0 does NOT allow the user to modify boot options
+
+# COMPUTERNAME set to {RANDOM} will automatically generate a unique newbiot
+# name every time you boot.
+
+# ENCRYPTPW is only generated from within the network config utility
+# PASSWORD can be used for blank passwords or manual modification of the answers.inf
+
+# AUTOLOGON=YES will cause the program to automatically logon the user and
+# provide the password.  It will also map the network drive.  
+# to use autologon you must provide username, password, sharedrive and sharepath
+
+# Most of these settings can be saved from within the network config utility
+# except for the CMD and PROT options.
+
+# email your commends/questions to teledata@tdonline.com
+# Be sure to use "NETWORK BOOT DISK" as your subject
